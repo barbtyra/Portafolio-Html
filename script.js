@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
         attempts++;
 
         if (guess === WORD) {
-            showModal("¡Felicidades, has adivinado la palabra!");
+            showModal("¡Felicidades, has adivinado la palabra!..." + WORD);
             resetGame();
         } else if (attempts === maxAttempts) {
             showModal("¡Lo siento, no has adivinado la palabra! La palabra era " + WORD);
