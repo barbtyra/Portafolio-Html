@@ -1,64 +1,64 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio de Barbara Rocio Tyrakowski</title>
-    <link rel="stylesheet" href="./style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wordle PPY</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <div id="branding">
-                <h1>Portafolio de Barbara Rocio Tyrakowski Palacios</h1>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="#acerca-de-mi">Acerca de mí</a></li>
-                    <li><a href="#habilidades">Habilidades</a></li>
-                    <li><a href="#experiencia">Experiencia</a></li>
-                    <li><a href="#proyectos">Proyectos</a></li>
-                    <li><a href="#contacto">Contacto</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+  <h1>Wordle PPY</h1>
+  <div id="grid"></div>
+  <div class="input-area">
+    <input type="text" id="guess-input" maxlength="5">
+    <button id="guess-button">Intentar</button>
+  </div>
+  <div id="keyboard">
+    <div class="keyboard-row">
+      <button class="key">Q</button>
+      <button class="key">W</button>
+      <button class="key">E</button>
+      <button class="key">R</button>
+      <button class="key">T</button>
+      <button class="key">Y</button>
+      <button class="key">U</button>
+      <button class="key">I</button>
+      <button class="key">O</button>
+      <button class="key">P</button>
+    </div>
+    <div class="keyboard-row">
+      <button class="key">A</button>
+      <button class="key">S</button>
+      <button class="key">D</button>
+      <button class="key">F</button>
+      <button class="key">G</button>
+      <button class="key">H</button>
+      <button class="key">J</button>
+      <button class="key">K</button>
+      <button class="key">L</button>
+      <button class="key">Ñ</button>
+    </div>
+    <div class="keyboard-row">
+      <button class="key">Z</button>
+      <button class="key">X</button>
+      <button class="key">C</button>
+      <button class="key">V</button>
+      <button class="key">B</button>
+      <button class="key">N</button>
+      <button class="key">M</button>
+      <button id="delete-key">DEL</button>
+      <button id="enter-key">ENTER</button>
+    </div>
+  </div>
 
-    <section id="acerca-de-mi" class="container">
-        <h2>Acerca de mí</h2>
-        <p>Estudiante de Ingeniería en Informática de 22 años, motivada y comprometida con el aprendizaje continuo y el desarrollo de habilidades técnicas y prácticas en el área de la informática.</p>
-    </section>
+  
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span id="modal-close" class="close">&times;</span>
+      <p id="modal-message"></p>
+    </div>
+  </div>
 
-    <section id="habilidades" class="container">
-        <h2>Habilidades</h2>
-        <ul>
-            <li>Programación en HTML, C++ y JavaScript</li>
-
-        </ul>
-    </section>
-
-    <section id="experiencia" class="container">
-        <h2>Experiencia</h2>
-        <h3>Pasante Estudiantil</h3>
-        <p><strong>Empresa:</strong> Entidad Binacional Yacyreta</p>
-        <p><strong>Fechas:</strong> Diciembre 2018 - Febrero 2019</p>
-    </section>
-
-    <section id="proyectos" class="container">
-        <h2>Proyectos</h2>
-        <div class="proyecto">
-            <h3>Guarani express</h3>
-            <p>Diccionario de guarani</p>
-        </div>
-    </section>
-
-    <section id="contacto" class="container">
-        <h2>Contacto</h2>
-        <p>Puedes contactarme a través de los siguientes medios:</p>
-        <ul>
-            <li>Email: <a href="mailto:[tyrakowski40@gmail.com]">tyrakowski40@gmail.com</a></li>
-            <li>Numero de telefono: <a>0983668007</a></li>
-        </ul>
-    </section>
 </body>
 </html>
