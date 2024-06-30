@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const words = ["CASAS", "BAILA", "ASADO", "CIELO", "JUEGO", "PALAB", "NIEVE", "SOLAR", "LUNAR", "COMER"]; 
-    let WORD = getRandomWord(words);
+    let WORD = '';
     const maxAttempts = 6;
     let attempts = 0;
 
@@ -95,14 +94,21 @@ document.addEventListener("DOMContentLoaded", () => {
     function resetGame() {
         attempts = 0;
         grid.innerHTML = '';
-        WORD = getRandomWord(words);
         guessButton.disabled = false;
+        getRandomWordFromAPI();
     }
 
-    function getRandomWord(words) {
-        
-        const filteredWords = words.filter(word => word.length === 5);
-        
-        return filteredWords[Math.floor(Math.random() * filteredWords.length)];
+    function getRandomWordFromAPI() {
+        fetch('https://random-word-api.herokuapp.com/word?lang=es&number=1&length=5')
+            .then(response => response.json())
+            .then(data => {
+                WORD = data[0].toUpperCase(); 
+            })
+            .catch(error => {
+                console.error('Error al obtener palabra desde la API:', error);
+                showModal('Error al obtener palabra desde la API.');
+            });
     }
+
+    getRandomWordFromAPI();
 });
